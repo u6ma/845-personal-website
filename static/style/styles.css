@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "mainfont";
+  src: url("../assets/DepartureMono.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Helvetica, serif;
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 2em;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.navbar {
+  margin-top: 2em;
+  margin-bottom: 12%;
+  font-size: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+.masked-text {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #888;
+  background-image: url("../assets/thing.svg");
+  background-size: 400%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
