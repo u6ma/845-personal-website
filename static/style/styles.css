@@ -8,7 +8,7 @@
   font-family: "TheFont";
   src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format("woff2");
 }
-#titlething {
+.titlething {
   font-family: "TheFont";
   animation: letter-breathe 3s ease-in-out infinite;
 }
@@ -164,6 +164,11 @@ a:hover {
   100% {
     background-position: 100% 50%;
   }
+}
+footer {
+  margin-top: 25%;
+  font-size: 1.75em;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

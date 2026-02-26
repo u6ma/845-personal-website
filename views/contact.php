@@ -6,8 +6,9 @@ $TITLE = "Contact"
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title> <?= htmlspecialchars($TITLE) ?></title>
+    <title>845.lol - <?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/svg" href="../static/assets/favicon.svg">
 </head>
 <body>
 <div class="title centred">
