@@ -9,7 +9,7 @@ $TITLE = http_response_code()
     <title>ERROR <?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
 </head>
-
+<body>
 <div class="title centred">
     <h1 class="masked-text"><?= htmlspecialchars($TITLE) ?></h1>
 </div>
@@ -17,7 +17,5 @@ $TITLE = http_response_code()
     <p>It seems you have encountered an error</p>
     <a href="/">Return Home</a>
 </div>
-
-
 </body>
 </html>
