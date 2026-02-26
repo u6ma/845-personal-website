@@ -10,9 +10,14 @@ $TITLE = http_response_code()
     <link href="../static/style/styles.css" rel="stylesheet"/>
 </head>
 
-<div class="title">
+<div class="title centred">
     <h1 class="masked-text"><?= htmlspecialchars($TITLE) ?></h1>
-    <p class="navbar">It seems you have encountered an error</p>
 </div>
+<div class="navbar centred">
+    <p>It seems you have encountered an error</p>
+    <a href="/">Return Home</a>
+</div>
+
+
 </body>
 </html>

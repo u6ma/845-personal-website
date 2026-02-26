@@ -26,7 +26,7 @@ $TITLE = "845.lol"
         <br>
         <nav class="navbarnew">
             <p><a href="/contact">Contact</a> | <a href="/portfolio">Portfolio</a> | <a href="/projects">Projects</a> |
-                <a href="/gallery"></a>gallery <br> <a href="/host">Hosting Services</a></p>
+                <a href="/gallery">Gallery</a> <br> <a href="/host">Hosting Services</a></p>
         </nav>
         <br>
         <p id="descriptionfooter"> (beware this site is lined with Easter eggs, sometimes random page links might pop

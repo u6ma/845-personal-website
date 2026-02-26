@@ -1,8 +1,7 @@
-ADD TO NGINX.CONF
-``location / {
-try_files $uri $uri/ /index.php 
-}``
+TO INSTALL RUN
 
-CREATE A .ENV FILE
+``composer install``
 
-POPULATE WITH:
+CONFIGURE NGINX TO NGINX.CONF
+
+RENAME .env.example TO .env AND POPULATE WITH REQUIRED DATA
