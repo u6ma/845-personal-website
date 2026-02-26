@@ -15,10 +15,6 @@ switch ($request) {
         require __DIR__ . $viewDir . 'home.php';
         break;
 
-    case '/bob':
-        require __DIR__ . $viewDir . 'bob.php';
-        break;
-
     case '/contact':
         require __DIR__ . $viewDir . 'contact.php';
         break;
@@ -26,6 +22,37 @@ switch ($request) {
     case '/portfolio':
         require __DIR__ . $viewDir . 'portfolio.php';
         break;
+
+    case '/projects':
+        require __DIR__ . $viewDir . 'projects.php';
+        break;
+
+    case '/matrix':
+        require __DIR__ . $viewDir . 'matrix.php';
+        break;
+
+    case '/portfolio/commission':
+        require __DIR__ . $viewDir . 'commission.php';
+        break;
+
+    case '/gallery':
+        require __DIR__ . $viewDir . 'gallery.php';
+        break;
+
+    case '/host':
+        require __DIR__ . $viewDir . 'host.php';
+        break;
+
+    // EASTER EGGS
+
+    case '/845':
+        require __DIR__ . $viewDir . '845.php';
+        break;
+
+    case '/bob':
+        require __DIR__ . $viewDir . 'bob.php';
+        break;
+
 
     default:
         http_response_code(404) or http_response_code(403) or http_response_code(303) or http_response_code(500);
