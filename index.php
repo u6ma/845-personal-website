@@ -53,7 +53,7 @@ switch ($request) {
             } else {
                 // CAPTCHA failed — show error or form again
                 echo "<p>CAPTCHA failed — try again.</p>";
-                require $viewDir . 'contact.php';
+                require __DIR__ . $viewDir . 'contact.php';
                 exit;
             }
         }

@@ -19,9 +19,11 @@ $TITLE = "Contact"
 </nav>
 <form method="POST" action="/contact">
     <div class="cf-turnstile"
-         data-sitekey="YOUR_SITE_KEY"></div>
+         data-sitekey="0x4AAAAAACij2yBGULmsoLEY"></div>
     <button type="submit">Show Contact Info</button>
 </form>
+<br>
+br
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>

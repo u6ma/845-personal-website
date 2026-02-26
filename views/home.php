@@ -23,16 +23,18 @@ $TITLE = "845.lol"
             website was made
             as a showcase of stuff i do.</p>
         <br>
+        <p id="descriptionfooter"> Navbar <strong>>>>>>>>>></strong></p>
         <br>
-        <nav class="navbarnew">
+        <br>
+    </div>
+    <div class="item">
+        <img src="https://media.tenor.com/gQob-N83hSAAAAAe/damnbirddodo.png" alt="Damn">
+        <nav class="navbar">
             <p><a href="/contact">Contact</a> | <a href="/portfolio">Portfolio</a> | <a href="/projects">Projects</a> |
                 <a href="/gallery">Gallery</a> <br> <a href="/host">Hosting Services</a></p>
         </nav>
         <br>
-        <p id="descriptionfooter"> (beware this site is lined with Easter eggs, sometimes random page links might pop
-            up)</p>
     </div>
-    <div class="item"></div>
 </div>
 
 </body>
