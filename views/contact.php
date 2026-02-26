@@ -6,7 +6,7 @@ $TITLE = "Contact"
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ERROR <?= htmlspecialchars($TITLE) ?></title>
+    <title> <?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
 </head>
 <body>
