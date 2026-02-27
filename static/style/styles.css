@@ -1,15 +1,81 @@
 @font-face {
-  font-family: "mainfont";
-  src: url("../assets/DepartureMono.otf");
+  font-family: "TerminessNerdFont";
+  src: url("../assets/fonts/TerminessNerdFont-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFont";
+  src: url("../assets/fonts/TerminessNerdFont-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TerminessNerdFont";
+  src: url("../assets/fonts/TerminessNerdFont-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFont";
+  src: url("../assets/fonts/TerminessNerdFont-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TerminessNerdFontMono";
+  src: url("../assets/fonts/TerminessNerdFontMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFontMono";
+  src: url("../assets/fonts/TerminessNerdFontMono-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TerminessNerdFontMono";
+  src: url("../assets/fonts/TerminessNerdFontMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFontMono";
+  src: url("../assets/fonts/TerminessNerdFontMono-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TerminessNerdFontPropo";
+  src: url("../assets/fonts/TerminessNerdFontPropo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFontPropo";
+  src: url("../assets/fonts/TerminessNerdFontPropo-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "TerminessNerdFontPropo";
+  src: url("../assets/fonts/TerminessNerdFontPropo-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TerminessNerdFontPropo";
+  src: url("../assets/fonts/TerminessNerdFontPropo-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 @font-face {
   font-family: "TheFont";
   src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2") format("woff2");
 }
 .titlething {
-  font-family: "TheFont";
+  font-family: "TheFont", TerminessNerdFont, serif;
   animation: letter-breathe 3s ease-in-out infinite;
 }
 
@@ -87,7 +153,7 @@
   }
 }
 body {
-  font-family: Helvetica, serif;
+  font-family: TerminessNerdFont, Helvetica, serif;
   color: white;
   background: black;
   margin: 0;
@@ -150,7 +216,7 @@ a:hover {
   color: #888;
   background-image: url("../assets/thing.svg");
   background-size: 400%;
-  background-position: 0 50%;
+  background-position: 0 30%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
