@@ -14,6 +14,15 @@ if (php_sapi_name() === 'cli-server') {
 $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $viewDir = '/views/';
 
+function IsDevMode(): bool
+{
+    if ($_ENV['ENV_TYPE'] == 'DEVELOPMENT')
+        return true;
+    elseif ($_ENV['ENV_TYPE'] == 'PRODUCTION')
+        return false;
+    else return false;
+}
+
 switch ($request) {
     case '':
     case '/':
@@ -25,7 +34,7 @@ switch ($request) {
 
             $token = $_POST['cf-turnstile-response'] ?? '';
 
-            $secret = $_ENV['TURNSTILE_SECRET_KEY'];
+            $secret = $_ENV['TURNSTILE_SECRET'];
 
             $verify = file_get_contents(
                 "https://challenges.cloudflare.com/turnstile/v0/siteverify",
@@ -45,7 +54,7 @@ switch ($request) {
 
             $result = json_decode($verify, true);
 
-            if (!empty($result['success'])) {
+            if (!empty($result['success']) or (IsDevMode() === true)) {
                 // CAPTCHA passed — show contact info
                 echo "<h2>Thanks For Verifying</h2>";
                 echo "<h4>Contact Info <br> Email: iusearchbtw845@gmail.com <br> Alternate Email (in case i don't respond within a month): vinci845@icloud.com </h4>";

@@ -1,5 +1,7 @@
 <?php
-$TITLE = "Contact"
+$TITLE = "Contact";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 ?>
 
 <!DOCTYPE HTML>
@@ -20,11 +22,10 @@ $TITLE = "Contact"
 </nav>
 <form method="POST" action="/contact">
     <div class="cf-turnstile"
-         data-sitekey="0x4AAAAAACij2yBGULmsoLEY"></div>
+         data-sitekey="<?= htmlspecialchars($_ENV['TURNSTILE_SITE_KEY']) ?>"></div>
     <button type="submit">Show Contact Info</button>
 </form>
 <br>
-br
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
