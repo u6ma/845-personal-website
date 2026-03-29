@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
+session_start();
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
@@ -30,6 +32,7 @@ switch ($request) {
         break;
 
     case '/contact':
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $token = $_POST['cf-turnstile-response'] ?? '';
@@ -55,18 +58,28 @@ switch ($request) {
             $result = json_decode($verify, true);
 
             if (!empty($result['success']) or (IsDevMode() === true)) {
-                // CAPTCHA passed — show contact info
-                echo "<h2>Thanks For Verifying</h2>";
-                echo "<h4>Contact Info <br> Email: iusearchbtw845@gmail.com <br> Alternate Email (in case i don't respond within a month): vinci845@icloud.com </h4>";
+                $_SESSION['turnstile_once'] = true;
+                header('Location: /contactinfo/');
                 exit;
             } else {
-                // CAPTCHA failed — show error or form again
-                echo "<p>CAPTCHA failed — try again.</p>";
                 require __DIR__ . $viewDir . 'contact.php';
                 exit;
             }
         }
         require __DIR__ . $viewDir . 'contact.php';
+        break;
+
+    case '/contactinfo/':
+        if (empty($_SESSION['turnstile_once'])) {
+            http_response_code(403);
+            $error = http_response_code();
+            require __DIR__ . $viewDir . 'error.php';
+            exit;
+        }
+
+        unset($_SESSION['turnstile_once']);
+
+        require __DIR__ . $viewDir . 'protected/info.php';
         break;
 
     case '/portfolio':
@@ -96,12 +109,13 @@ switch ($request) {
     // EASTER EGGS
 
     case '/845':
-        require __DIR__ . $viewDir . '845.php';
+        require __DIR__ . $viewDir . 'easter/845.php';
         break;
 
     case '/bob':
-        require __DIR__ . $viewDir . 'bob.php';
+        require __DIR__ . $viewDir . 'easter/bob.php';
         break;
+
 
 
     default:
@@ -110,4 +124,3 @@ switch ($request) {
         require __DIR__ . $viewDir . 'error.php';
         break;
 }
-
