@@ -1,0 +1,31 @@
+#DISCLAIMER:THIS IS AN EXAMPLE; PLEASE MAKE YOUR OWN
+
+server {
+    listen 80;
+    server_name 845.lol;
+
+    root /var/www/personalwebsite/public;
+    index index.php;
+
+    location / {
+        try_files "" /index.php;
+    }
+
+    location = /index.php {
+        include fastcgi_params;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+    location ~ \.php$ {
+        return 404;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+
+    location ~* /(vendor|storage|config|\.git|\.env) {
+        deny all;
+    }
+}
