@@ -72,7 +72,6 @@ function rateLimit(string $key, int $maxRequests, int $windowSeconds): bool
 
     $history = $_SESSION['rate_limit'][$key] ?? [];
 
-    // filter using Instant recreation from epoch
     $_SESSION['rate_limit'][$key] = array_filter(
         $history,
         function ($epoch) use ($now, $window) {
@@ -85,7 +84,6 @@ function rateLimit(string $key, int $maxRequests, int $windowSeconds): bool
         return false;
     }
 
-    // store epoch seconds
     $_SESSION['rate_limit'][$key][] = $now->getEpochSecond();
 
     return true;
@@ -165,7 +163,7 @@ switch ($request) {
         require __DIR__ . $viewDir . 'host.php';
         break;
 
-// TODO, FINISH Random number generator
+    // TODO, FINISH Random number generator
 
 //    case '/randomnumbers':
 //        if (!rateLimit('randomnumbers', 10, 20)) {

@@ -1,4 +1,7 @@
 <?php
+
+// TODO: FINISH
+
 $TITLE = "Random Number Generator";
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
