@@ -1,5 +1,6 @@
 {
   "require": {
-    "vlucas/phpdotenv": "^5.6.3"
+    "vlucas/phpdotenv": "^5.6.3",
+    "brick/date-time": "^0.9.0"
   }
 }

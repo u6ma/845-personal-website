@@ -2,6 +2,7 @@
 @use "title"
 @use "scroll"
 @use "fancy"
+@use "masked"
 
 body
   font-family: TerminessNerdFont, Helvetica, serif
@@ -54,23 +55,6 @@ img
 a:hover
   color: #888888
 
-.masked-text
-  font-size: 8rem
-  font-weight: bold
-  color: #888
-  background-image: url("../assets/thing.svg")
-  background-size: 400%
-  background-position: 0 30%
-  background-clip: text
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-  animation: animate-background 30s infinite linear
-
-@keyframes animate-background
-  0%
-    background-position: 0 50%
-  100%
-    background-position: 100% 50%
 
 footer
   margin-top: 25%

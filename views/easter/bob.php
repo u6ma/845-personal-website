@@ -9,7 +9,7 @@ $TITLE = "BOB WILL COME FOR YOU";
     <meta charset="utf-8">
     <title><?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
-    <link rel="icon" type="image/svg" href="../static/assets/favicon.svg">
+    <link rel="icon" type="image/svg" href="../static/assets/icons/favicon.svg">
 
 </head>
 <body>

@@ -8,16 +8,14 @@ $TITLE = "Portfolio"
     <meta charset="utf-8">
     <title>845.lol - <?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
-    <link rel="icon" type="image/svg" href="../static/assets/favicon.svg">
+    <link rel="icon" type="image/svg" href="../static/assets/icons/favicon.svg">
 </head>
 <body>
 <div class="centred">
     <h1 class="masked-text title"><?= htmlspecialchars($TITLE) ?></h1>
 </div>
 <nav class="navbar centred">
-    <p><a href="/">Home</a> | <a href="/projects">Projects</a> | <a href="/gallery">Gallery</a> | <a href="/host">Hosting
-            Services</a>
-        <a href="/contact">Contact</a></p>
+    <p><a href="/">Home</a> | <a href="/projects">Projects</a> | <a href="/gallery">Gallery</a> | <a href="/host">Hosting Services</a> | <a href="/contact">Contact</a></p>
 </nav>
 <h1 class="centred">WORK IN PROGRESS</h1>
 <footer>

@@ -8,7 +8,7 @@ $TITLE = http_response_code()
     <meta charset="utf-8">
     <title>845.lol - ERROR <?= htmlspecialchars($TITLE) ?></title>
     <link href="../static/style/styles.css" rel="stylesheet"/>
-    <link rel="icon" type="image/svg" href="../static/assets/favicon.svg">
+    <link rel="icon" type="image/svg" href="../static/assets/icons/favicon.svg">
 </head>
 <body>
 <div class="title centred">

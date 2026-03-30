@@ -152,6 +152,27 @@
     text-shadow: 0 0 20px #3498db, 0 0 30px #3498db, 0 0 40px #3498db;
   }
 }
+.masked-text {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #888;
+  background-image: url("../assets/images/thing.svg");
+  background-size: 400%;
+  background-position: 0 30%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 body {
   font-family: TerminessNerdFont, Helvetica, serif;
   color: white;
@@ -211,27 +232,6 @@ a:hover {
   color: #888888;
 }
 
-.masked-text {
-  font-size: 8rem;
-  font-weight: bold;
-  color: #888;
-  background-image: url("../assets/thing.svg");
-  background-size: 400%;
-  background-position: 0 30%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-background 30s infinite linear;
-}
-
-@keyframes animate-background {
-  0% {
-    background-position: 0 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
 footer {
   margin-top: 25%;
   font-size: 1.75em;
