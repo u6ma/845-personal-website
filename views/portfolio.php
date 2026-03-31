@@ -18,6 +18,17 @@ $TITLE = "Portfolio"
     <p><a href="/">Home</a> | <a href="/projects">Projects</a> | <a href="/gallery">Gallery</a> | <a href="/host">Hosting Services</a> | <a href="/contact">Contact</a></p>
 </nav>
 <h1 class="centred">WORK IN PROGRESS</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="centred">
+<h1 class="linky"><a href="/portfolio/commission">Commission Me!</a></h1>
+<p>(please commission me for graphics and music only, development commissions are not a thing yet)</p>
+</div>
+
 <footer>
     <h3 class="titlething">
         845.lol
