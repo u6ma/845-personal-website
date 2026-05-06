@@ -40,7 +40,7 @@ function randomIntExcluding(int $min, int $max, array $exclude = []): int
     <p><a href="/contact">Contact</a> | <a href="/portfolio">Portfolio</a> | <a href="/projects">Projects</a> | <a href="/gallery">Gallery</a> | <a href="/host">Hosting Services</a></p>
 </nav>
 
-<form method="GET" action="/randomnumbers">
+<form method="POST" action="/randomnumbers">
     Min: <input type="number" name="min" value="1"><br>
     Max: <input type="number" name="max" value="50"><br>
     Count: <input type="number" name="count" value="5"><br>
