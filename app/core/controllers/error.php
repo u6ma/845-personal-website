@@ -20,7 +20,10 @@ class ERRORHANDLE {
         $this->logdir = __DIR__ . '/../../' . $this->ENV->env("LOG_DIR");
         $this->elogfile = $this->ENV->env("ERROR_LOG_FILE_NAME");
     }
-    public function createerror(){
+    public function createerror($Code,$Debugopts = null){
+          if ($Debugopts === null and $this->UTIL->IsDevMode()){
+              return null;
+          }
     }
 
     public function logerror($USR = null, $Error, $Location, $Logdir = null, $Logfile = null) {

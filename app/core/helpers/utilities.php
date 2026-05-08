@@ -4,14 +4,20 @@
 
 
 class UTIL {
+
+    private ENVFUNCTIONS $ENV;
+
+    public function __construct(ENVFUNCTIONS $ENV) {
+        $this->ENV = $ENV;
+    }
+
     // ENV_TYPE: 'DEVELOPMENT' or 'PRODUCTION'  inside env
     public function IsDevMode(): bool
     {
-        $ENV = new ENVFUNCTIONS();
 
-        if ($ENV->env("ENV_TYPE") === 'DEVELOPMENT') {
+        if ($this->ENV->env("ENV_TYPE") === 'DEVELOPMENT') {
            return true;
-        } elseif ($ENV->env("ENV_TYPE") === 'PRODUCTION') {
+        } elseif ($this->ENV->env("ENV_TYPE") === 'PRODUCTION') {
             return false;
         } else {return false;}
 
